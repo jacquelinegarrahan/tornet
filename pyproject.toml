@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "tornet"
+version = "1.0"
+description = "Tools for working with TorNet dataset in python"
+authors = ["MIT Lincoln Laboratory, Group 43 <mark.veillette@ll.mit.edu>"]
+readme = "README.md"
+packages = [{include = "tornet", from = "."}, {include = "tornet/display/cmaps.pkl"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy="*"
+matplotlib = "*"
+pandas = "*"
+xarray="*"
+netCDF4="*"
+tqdm = "*"
+glob2 = "*"
+jupyterlab = "*"
+huggingface_hub = "*"
+torch = "*"
+torchvision = "*"
+torchmetrics = "*"
+lightning ="*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-runner = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
